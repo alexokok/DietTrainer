@@ -2,6 +2,8 @@ package com.mazaev.diettrainer.ui.schedule
 
 import android.os.Bundle
 import android.view.View
+import android.view.View.VISIBLE
+import android.view.ViewStub
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomappbar.BottomAppBar
@@ -32,5 +34,8 @@ class ScheduleFragment : BaseFragment() {
         val adapter = ScheduleAdapter()
 
         recyclerView.adapter = adapter
+
+        val emptySchedulePlaceholderView = view.findViewById<ViewStub>(R.id.schedule_placeholder)
+        emptySchedulePlaceholderView.visibility = VISIBLE
     }
 }
