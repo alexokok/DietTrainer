@@ -3,6 +3,7 @@ package com.mazaev.diettrainer.ui.schedule
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomappbar.BottomAppBar
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.mazaev.diettrainer.R
@@ -26,5 +27,10 @@ class ScheduleFragment : BaseFragment() {
         addButton.setOnClickListener {
             Toast.makeText(context, "Add item", Toast.LENGTH_SHORT).show()
         }
+
+        val recyclerView = view.findViewById<RecyclerView>(R.id.schedule_list)
+        val adapter = ScheduleAdapter()
+
+        recyclerView.adapter = adapter
     }
 }
