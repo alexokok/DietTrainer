@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">DietTrainer</string>
+    <!-- Actions -->
+    <string name="action_delete">Delete</string>
+
+    <!-- Schedule -->
+    <string name="schedule_description">Description</string>
+    <string name="schedule_placeholder_text">No schedule</string>
+    <string name="schedule_support">Support</string>
 </resources>
