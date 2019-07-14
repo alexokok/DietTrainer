@@ -23,12 +23,15 @@
             android:id="@+id/schedule_app_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"/>
+            android:layout_gravity="bottom"
+            app:backgroundTint="@color/light_cyan"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/schedule_add_fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_add"
+            app:backgroundTint="@color/dark_cyan"
             app:layout_anchor="@id/schedule_app_bar"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

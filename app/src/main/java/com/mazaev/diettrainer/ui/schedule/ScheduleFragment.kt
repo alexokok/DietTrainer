@@ -1,9 +1,8 @@
 package com.mazaev.diettrainer.ui.schedule
 
 import android.os.Bundle
-import android.view.View
+import android.view.*
 import android.view.View.VISIBLE
-import android.view.ViewStub
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomappbar.BottomAppBar
@@ -16,6 +15,11 @@ import com.mazaev.diettrainer.ui.common.BaseFragment
  */
 class ScheduleFragment : BaseFragment() {
     override fun getLayoutResId(): Int = R.layout.fragment_schedule
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -37,5 +41,16 @@ class ScheduleFragment : BaseFragment() {
 
         val emptySchedulePlaceholderView = view.findViewById<ViewStub>(R.id.schedule_placeholder)
         emptySchedulePlaceholderView.visibility = VISIBLE
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.schedule_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.schedule_support -> Toast.makeText(context, "Send message with problem", Toast.LENGTH_SHORT).show()
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
