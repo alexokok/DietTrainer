@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/schedule_dialog_vertical_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".06"/>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/schedule_dialog_vertical_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".07"/>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/schedule_dialog_vertical_45"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".45"/>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/schedule_dialog_vertical_55"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".55"/>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/schedule_dialog_vertical_93"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".93"/>
+
+    <View
+            android:id="@+id/schedule_dialog_line"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_2"
+            android:layout_marginTop="@dimen/dp_24"
+            android:background="@color/black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@id/schedule_dialog_vertical_45"
+            app:layout_constraintEnd_toEndOf="@id/schedule_dialog_vertical_55"/>
+
+    <TextView
+            android:id="@+id/schedule_dialog_time_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_48"
+            android:paddingTop="@dimen/dp_16"
+            android:paddingBottom="@dimen/dp_16"
+            android:text="@string/schedule_dialog_alarm_time_title"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@id/schedule_dialog_vertical_7"
+            app:layout_constraintEnd_toStartOf="@id/schedule_dialog_time_value"/>
+
+    <TextView
+            android:id="@+id/schedule_dialog_time_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_16"
+            android:paddingBottom="@dimen/dp_16"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingEnd="@dimen/dp_8"
+            android:textSize="@dimen/sp_18"
+            android:textStyle="bold"
+            android:textColor="@color/dark_cyan"
+            app:layout_constraintTop_toTopOf="@id/schedule_dialog_time_title"
+            app:layout_constraintBottom_toBottomOf="@id/schedule_dialog_time_title"
+            app:layout_constraintStart_toEndOf="@id/schedule_dialog_time_title"
+            app:layout_constraintEnd_toEndOf="@id/schedule_dialog_vertical_93"
+            android:text="14:30"/>
+
+    <TextView
+            android:id="@+id/schedule_dialog_description_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:paddingTop="@dimen/dp_8"
+            android:paddingBottom="@dimen/dp_4"
+            android:text="@string/schedule_dialog_alarm_desc_title"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintTop_toBottomOf="@id/schedule_dialog_time_title"
+            app:layout_constraintStart_toStartOf="@id/schedule_dialog_vertical_7"/>
+
+    <EditText
+            android:id="@+id/schedule_dialog_description_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:importantForAutofill="no"
+            android:hint="@string/common_optional"
+            android:singleLine="true"
+            android:ellipsize="end"
+            app:layout_constraintTop_toBottomOf="@id/schedule_dialog_description_title"
+            app:layout_constraintStart_toStartOf="@id/schedule_dialog_vertical_6"
+            app:layout_constraintEnd_toEndOf="@id/schedule_dialog_vertical_93"
+            tools:ignore="LabelFor,UnusedAttribute"/>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/schedule_dialog_save"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/action_save"
+            android:layout_marginTop="@dimen/dp_32"
+            android:layout_marginBottom="@dimen/dp_32"
+            app:backgroundTint="@color/light_cyan"
+            app:icon="@drawable/ic_email"
+            app:layout_constraintTop_toBottomOf="@id/schedule_dialog_description_value"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/schedule_dialog_vertical_93"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
