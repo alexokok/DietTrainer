@@ -3,8 +3,17 @@
     <!-- Actions -->
     <string name="action_delete">Delete</string>
 
+    <!-- Common -->
+    <string name="common_optional">Optional</string>
+
     <!-- Schedule -->
     <string name="schedule_description">Description</string>
     <string name="schedule_placeholder_text">No schedule</string>
     <string name="schedule_support">Support</string>
+
+    <!-- Schedule dialog -->
+    <string name="schedule_dialog_alarm_time_title">Alarm time</string>
+    <string name="schedule_dialog_alarm_desc_title">Description</string>
+    <string name="action_save">Save</string>
+
 </resources>

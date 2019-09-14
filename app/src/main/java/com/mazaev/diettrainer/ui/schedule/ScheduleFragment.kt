@@ -9,11 +9,15 @@ import com.google.android.material.bottomappbar.BottomAppBar
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.mazaev.diettrainer.R
 import com.mazaev.diettrainer.ui.common.BaseFragment
+import com.mazaev.diettrainer.ui.schedule.dialog.ScheduleDialog
 
 /**
  * @author Alexey Mazaev
  */
 class ScheduleFragment : BaseFragment() {
+
+    private val SCHEDULE_DIALOG_TAG = "shedule_dialog.tag"
+
     override fun getLayoutResId(): Int = R.layout.fragment_schedule
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,7 +35,7 @@ class ScheduleFragment : BaseFragment() {
 
         val addButton = view.findViewById<FloatingActionButton>(R.id.schedule_add_fab)
         addButton.setOnClickListener {
-            Toast.makeText(context, "Add item", Toast.LENGTH_SHORT).show()
+            ScheduleDialog().show(childFragmentManager, SCHEDULE_DIALOG_TAG)
         }
 
         val recyclerView = view.findViewById<RecyclerView>(R.id.schedule_list)
